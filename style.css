@@ -44,7 +44,7 @@ li span {
 #container {
   position: relative;
   max-width: 91.4rem;
-  height: 129rem;
+  /* height: 129rem; */
 
   margin: 0 auto;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
@@ -99,7 +99,7 @@ li span {
   color: var(--fc-gray-300);
 
   width: 34%;
-  height: 100%;
+  /* height: 100%; */
 
   display: flex;
   flex-direction: column;
@@ -217,7 +217,7 @@ li span {
 }
 
 .work-content + .work-content {
-  margin-top: 2rem;
+  margin-top: 2rem;  
 }
 
 .work-title {
@@ -248,3 +248,19 @@ li span {
     letter-spacing: 0.2rem;
   }
  }
+
+ /* Para elementos que devem iniciar uma nova página */
+.page-break {
+  page-break-before: always; /* Inicia uma nova página antes do elemento */
+}
+
+/* Para evitar que elementos sejam divididos entre páginas */
+.no-break {
+  page-break-inside: avoid; /* Evita que o elemento seja quebrado */
+}
+
+/* Para controlar a quebra de página em listas */
+ul, ol {
+  page-break-inside: avoid; /* Evita que listas sejam quebradas */
+} 
+
