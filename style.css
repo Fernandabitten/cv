@@ -45,7 +45,6 @@ li span {
   position: relative;
   max-width: 91.4rem;
   /* height: 129rem; */
-
   margin: 0 auto;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
 
@@ -205,6 +204,10 @@ li span {
   margin-top: 1.8rem;
 }
 
+/* .skill-content ul li {
+  margin-top: 1.4rem;
+} */
+
 .light-content {
   width: 100%;
 
@@ -217,7 +220,7 @@ li span {
 }
 
 .work-content + .work-content {
-  margin-top: 2rem;  
+  margin-top: 2rem;
 }
 
 .work-title {
@@ -235,21 +238,21 @@ li span {
 
 @media (max-width: 829px) {
   #container {
-    height:100%;
+    height: 100%;
     width: 100%;
     background: var(--fc-gray-900);
   }
-  #name{
+  #name {
     letter-spacing: 0.3rem;
   }
 }
 @media (max-width: 829px) {
-  #name{
+  #name {
     letter-spacing: 0.2rem;
   }
- }
+}
 
- /* Para elementos que devem iniciar uma nova página */
+/* Para elementos que devem iniciar uma nova página */
 .page-break {
   page-break-before: always; /* Inicia uma nova página antes do elemento */
 }
@@ -260,7 +263,52 @@ li span {
 }
 
 /* Para controlar a quebra de página em listas */
-ul, ol {
+ul,
+ol {
   page-break-inside: avoid; /* Evita que listas sejam quebradas */
-} 
+}
 
+.navy-link {
+  color: var(--fc-gray-600);
+}
+
+@media (max-width: 600px) {
+  #container {
+    flex-direction: column;
+    width: 100vw;
+    min-width: 0;
+    box-shadow: none;
+  }
+  #header {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    height: auto;
+  }
+  #header img {
+    width: 10rem;
+    height: 10rem;
+  }
+  #name {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+  }
+  #pro-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  #dark-column,
+  #light-column {
+    width: 100%;
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .dark-content,
+  .light-content {
+    padding: 0 1rem;
+  }
+}
